@@ -1,8 +1,0 @@
-body {
-  display:flex;
-  flex-direction:column;
-        }
-canvas {
-  display: flex;
-  flex: 1 1 auto;
-}
