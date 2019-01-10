@@ -1,19 +1,33 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+---
+layout: default
+title: Home
+---
 
-    <link rel="stylesheet" href="mothersDay.css">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-  </head>
-  <body>
-    <div class="header">
-      <p>Hi Mom! Happy Mother's Day! Check out this really awesome thing I made you. Clear the balls away to reveal a secret message!</p>
-    </div>
-    <canvas onclick="repel(event)" id="canvas" class="canvas" width="1000" height=750></canvas>
-    <script type="text/javascript" src='mothersDay.js' >
-    </script>
-  </body>
-</html>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+
+    {{ post.content }}
+  </article>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
