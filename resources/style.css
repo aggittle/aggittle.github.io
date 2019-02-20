@@ -1,0 +1,125 @@
+body {
+  font-family: helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9
+}
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 69px;
+  border-bottom: 1px solid seashell;
+}
+.logo {
+  display: inline-flex;
+  margin-left: 10px;
+  height: 50px;
+}
+.logo img {
+  width: 150px;
+}
+header nav {
+  display: inline-flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav span  {
+  margin: 0px 25px;
+}
+
+nav span a {
+  color: seashell;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#mission {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg");
+  height: 700px;
+  width: 1200px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+.text span {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+  margin-left: 30px;
+  height: 200px;
+  width: 300px;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+}
+.image h5 {
+  margin-top: 10px;
+}
+#featuredtea {
+  width: 1000px;
+}
+#locations {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg");
+  height: 500px;
+  width: 1200px;
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#locationsub {
+  display: flex;
+  flex-direction: row;
+}
+.location {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  margin: 15px 20px;
+  opacity: 0.9;
+}
+#contact {
+  height: 200px;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
